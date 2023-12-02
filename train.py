@@ -23,15 +23,15 @@ class ArgsBase():
             parents=[parent_parser], add_help=False)
         parser.add_argument('--train_file',
                             type=str,
-                            default='data/test.tsv',
+                            default='/Users/kim-yewon/bigkindsnews/pair_news.csv',
                             help='train file')
         parser.add_argument('--test_file',
                             type=str,
-                            default='data/test.tsv',
+                            default='/Users/kim-yewon/bigkindsnews/test_data.csv',
                             help='test file')
         parser.add_argument('--batch_size',
                             type=int,
-                            default=28,
+                            default=4,
                             help='')
         parser.add_argument('--checkpoint',
                             type=str,
@@ -102,3 +102,7 @@ if __name__ == '__main__':
                         )
     
     trainer.fit(model, dm)
+
+    # dm.setup('test')
+    # # test
+    # trainer.test(model, dm)

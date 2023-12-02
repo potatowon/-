@@ -1,0 +1,11 @@
+accelerator: cpu
+batch_size: 4
+checkpoint: checkpoint
+gradient_clip_val: 1.0
+lr: 3.0e-05
+max_epochs: 10
+max_len: 512
+num_gpus: 1
+num_workers: 1
+test_file: /Users/kim-yewon/bigkindsnews/test_data.csv
+train_file: /Users/kim-yewon/bigkindsnews/pair_news.csv

@@ -1,0 +1,42 @@
+{
+    "os": "macOS-10.16-x86_64-i386-64bit",
+    "python": "3.8.16",
+    "heartbeatAt": "2023-11-29T05:22:32.642305",
+    "startedAt": "2023-11-29T05:22:32.539890",
+    "docker": null,
+    "cuda": null,
+    "args": [],
+    "state": "running",
+    "program": "train.py",
+    "codePath": "train.py",
+    "git": {
+        "remote": "https://github.com/seujung/KoBART-summarization.git",
+        "commit": "6a7c51b39294666ef6f1bf4033294da1e43da57a"
+    },
+    "email": "yewkim0203@gmail.com",
+    "root": "/Users/kim-yewon/bigkindsnews/KoBART-transepose/KoBART-summarization",
+    "host": "gim-yewon-ui-MacBookAir.local",
+    "username": "kim-yewon",
+    "executable": "/Users/kim-yewon/opt/anaconda3/envs/py38_django_42/bin/python",
+    "cpu_count": 8,
+    "cpu_count_logical": 8,
+    "cpu_freq": {
+        "current": 2400,
+        "min": 2400,
+        "max": 2400
+    },
+    "cpu_freq_per_core": [
+        {
+            "current": 2400,
+            "min": 2400,
+            "max": 2400
+        }
+    ],
+    "disk": {
+        "total": 228.27386474609375,
+        "used": 163.57041549682617
+    },
+    "memory": {
+        "total": 8.0
+    }
+}

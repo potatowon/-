@@ -15,7 +15,7 @@ class KoBARTSummaryDataset(Dataset):
         super().__init__()
         self.tokenizer = tokenizer
         self.max_len = max_len
-        self.docs = pd.read_csv(file, sep='\t')
+        self.docs = pd.read_csv(file)
         self.len = self.docs.shape[0]
 
         self.pad_index = self.tokenizer.pad_token_id
@@ -86,12 +86,14 @@ class KobartSummaryModule(L.LightningDataModule):
     # OPTIONAL, called for every GPU/machine (assigning state is OK)
     def setup(self, stage):
         # split dataset
-        self.train = KoBARTSummaryDataset(self.train_file_path,
-                                 self.tok,
-                                 self.max_len)
-        self.test = KoBARTSummaryDataset(self.test_file_path,
-                                self.tok,
-                                self.max_len)
+        if stage == 'fit':
+            self.train = KoBARTSummaryDataset(self.train_file_path,
+                                    self.tok,
+                                    self.max_len)
+        if stage == 'test':
+            self.test = KoBARTSummaryDataset(self.test_file_path,
+                                    self.tok,
+                                    self.max_len)
 
     def train_dataloader(self):
         train = DataLoader(self.train,
